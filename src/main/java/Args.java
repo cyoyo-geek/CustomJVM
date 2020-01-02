@@ -15,9 +15,6 @@ public class Args {
     @Parameter(names = { "-cp", "-classpath" }, description = "classpath", order = 1)
     String classpath;
 
-    /**
-     * jre目录
-     */
     @Parameter(names = "-Xjre", description = "path to jre", order = 4)
     String jre;
 

@@ -14,5 +14,10 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
     compile group: 'com.beust', name: 'jcommander', version: '1.72'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
