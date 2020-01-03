@@ -11,5 +11,12 @@ public class ClassFileTest {
     public static final double E = 2.71828;
     public static void main(String[] args) throws RuntimeException {
         System.out.println("Hello, World!");
+        circumference(1.6f);
+    }
+
+    public static float circumference(float r) {
+        float pi = 3.14f;
+        float area = 2 * pi * r;
+        return area;
     }
 }
