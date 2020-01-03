@@ -24,4 +24,14 @@ public class ConstantStringInfo implements ConstantInfo {
                 '}';
     }
 
+    public String string(){
+        return constPool.getUTF8(nameIndex);
+    }
+
+
+    @Override
+    public int tag() {
+        return ConstantInfo.CONST_TAG_INTEGER;
+    }
+
 }

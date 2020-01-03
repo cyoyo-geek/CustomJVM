@@ -15,6 +15,15 @@ public class ConstantLongInfo implements ConstantInfo {
         value = reader.next2U4ToLong();
     }
 
+    public long value(){
+        return value;
+    }
+
+    @Override
+    public int tag() {
+        return ConstantInfo.CONST_TAG_INTEGER;
+    }
+
     @Override
     public String getValue() {
         return value + "";

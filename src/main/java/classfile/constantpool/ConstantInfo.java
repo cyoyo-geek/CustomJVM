@@ -22,6 +22,8 @@ public interface ConstantInfo {
 
     String getValue();
 
+    int tag();
+
 
     //Factory method
     static ConstantInfo createConstantInfo(int tag, ClassReader reader, ConstantPool constPool) {

@@ -14,6 +14,14 @@ public class ConstantDoubleInfo implements ConstantInfo {
         //u4
         value = reader.next2U4Double();
     }
+    public Double value(){
+        return value;
+    }
+
+    @Override
+    public int tag() {
+        return ConstantInfo.CONST_TAG_INTEGER;
+    }
 
     @Override
     public String getValue() {

@@ -15,6 +15,15 @@ public class ConstantIntegerInfo implements ConstantInfo {
         value = reader.nextU4ToInt();
     }
 
+    public Integer value(){
+        return value;
+    }
+
+    @Override
+    public int tag() {
+        return ConstantInfo.CONST_TAG_INTEGER;
+    }
+
     @Override
     public String getValue() {
         return value + "";

@@ -89,4 +89,35 @@ public class ClassFile {
         }
         return null;
     }
+
+    public String className() {
+        return constantPool.getClassName(this.classNameIndex);
+    }
+
+    public String superClassName() {
+        if (this.getSuperClassNameIndex() <= 0) {
+            return "";
+        }
+        return this.constantPool.getClassName(this.getSuperClassNameIndex());
+    }
+
+    public String[] interfaceNames() {
+        String[] interfaceNames = new String[this.getInterfaceIndexes().length];
+        for (int i = 0; i < this.getInterfaceIndexes().length; i++) {
+            interfaceNames[i] = this.constantPool.getClassName(this.getInterfaceIndexes()[i]);
+        }
+        return interfaceNames;
+    }
+
+    public ConstantPool constantPool() {
+        return this.constantPool;
+    }
+
+    public MemberInfo[] fields() {
+        return this.fields;
+    }
+
+    public MemberInfo[] methods() {
+        return this.methods;
+    }
 }

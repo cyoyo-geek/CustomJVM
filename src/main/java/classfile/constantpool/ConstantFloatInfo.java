@@ -15,6 +15,16 @@ public class ConstantFloatInfo implements ConstantInfo {
         value = reader.nextU4ToFloat();
     }
 
+
+    public Float value(){
+        return value;
+    }
+
+    @Override
+    public int tag() {
+        return ConstantInfo.CONST_TAG_INTEGER;
+    }
+
     @Override
     public String getValue() {
         return value + "";

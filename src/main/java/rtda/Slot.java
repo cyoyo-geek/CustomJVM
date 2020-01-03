@@ -5,7 +5,6 @@ import lombok.Setter;
 
 import java.lang.ref.Reference;
 
-
 public class Slot {
 
     private String num;

@@ -28,4 +28,9 @@ public class ConstantPool {
         return constInfo == null ? "" : constInfo.toString();
     }
 
+    public String getClassName(int idx){
+        ConstantClassInfo classInfo = (ConstantClassInfo) this.constantInfos[idx];
+        return this.getUTF8(classInfo.getNameIndex());
+    }
+
 }
