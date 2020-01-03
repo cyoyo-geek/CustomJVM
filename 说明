@@ -1,1 +1,2 @@
 -Xjre "C:\Program Files\Java\jdk1.8.0_131\jre" java.lang.Object
+-classpath "C:\Users\hexiaobing\Desktop\github\CustomJVM\build\classes\java\test" -Xjre "C:\Program Files\Java\jdk1.8.0_131\jre"  instructions.GaussTest

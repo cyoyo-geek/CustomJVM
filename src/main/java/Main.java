@@ -30,6 +30,10 @@ public class Main {
             byte[] classData = cp.readClass(className);
 
             ClassFile classFile = new ClassFile(classData);
+
+            MemberInfo mainMethod = classFile.getMainMethod();
+            Interpreter.execute(mainMethod.getCodeAttribute());
+            System.out.println("\n--------------------------------\n");
             printClassInfo(classFile);
            
         } catch (Exception e) {

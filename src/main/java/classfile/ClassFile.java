@@ -80,4 +80,13 @@ public class ClassFile {
         methods = MemberInfo.readMembers(constantPool, reader);
     }
 
+    public MemberInfo getMainMethod() {
+        for (MemberInfo m : methods) {
+            if ("main".equals(constantPool.getUTF8(m.getNameIndex()))
+                    && "([Ljava/lang/String;)V".equals(constantPool.getUTF8(m.getDescriptorIndex()))) {
+                return m;
+            }
+        }
+        return null;
+    }
 }

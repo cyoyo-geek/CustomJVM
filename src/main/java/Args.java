@@ -46,7 +46,7 @@ public class Args {
             cmd.parse(argv);
             args.ok = true;
         } catch (ParameterException ignored) {
-
+            System.out.println(ignored);
         }
 
         return args;

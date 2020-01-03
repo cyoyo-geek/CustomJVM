@@ -2,6 +2,8 @@ package classfile.attributes;
 
 import classfile.ClassReader;
 import classfile.constantpool.ConstantPool;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Code_attribute {
@@ -32,6 +34,8 @@ import classfile.constantpool.ConstantPool;
  * }
  * ```
  */
+@Getter
+@Setter
 public class CodeAttribute implements AttributeInfo {
 
     private int maxStack;//操作数栈的最大深度
